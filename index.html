@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <script src="https://kit.fontawesome.com/61bcea8d0d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+    crossorigin="anonymous">
+    <title>Zenith Wal-mart | Online shopping</title>
+</head>
+<html>
+<body>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/64a5d84494cf5d49dc61c81d/1h4jt9jcf';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+<nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: rgb(23, 23, 90);">
+  <a class="navbar-brand" href="#"><img src="images/plug3.png" id="img" alt="..."></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" id="white-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html" id="txt">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" id="topic">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" id="logoutButton">Logout</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="#" id="use" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Account
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="page4.html">Sign-up</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="page2.html">Log-in</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0" onsubmit="event.preventDefault(); search();">
+      <input class="form-control mr-sm-2" type="text" id="find" placeholder="Search products..." size="40">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" class="btn btn-secondary">Search</button>
+    </form>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <label class="switch" title="Change theme">
+    <input type="checkbox" id="toggleSwitch">
+    <span class="slider"></span>
+  </label>
+  <div class="border">
+    <marquee id="fast" scrollamount="10"><h1 class="font">FOODSTUFF SECTION</h1></marquee>
+  </div>
+   <p id="userGreeting"></p>
+
+  <div class="container">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block" src="images/Tomato.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block" src="images/pepper.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block" src="images/spring.jpg" alt="Third slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block" src="images/egg.jpg" alt="Fourth slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block" src="images/green.jpg" alt="Fifth slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block" src="images/onions.jpg" alt="Sixth slide">
+        </div>
+      </div>
+    </div>
+    <p id="message"></p>
+    <div class="card-group" id="cardGroup">
+          <div class="card" id="tomato">
+            <img class="card-img-top" src="images/Tomato.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">fresh Tomato</h5>
+              <p class="card-text">₦ 1,200</p>
+              <p class="del"><del>₦ 1,275</del></p>
+              <a href="#" class="btn" id="click" data-card="tomato">ADD TO CART</a>
+            </div>
+          </div>
+          <div class="card" id="pepper">
+            <img class="card-img-top" src="images/pepper.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">fresh Pepper</h5>
+              <p class="card-text">₦ 1,350</p>
+              <p class="del"><del>₦ 1,380</del></p>
+              <a href="#" class="btn" id="click" data-card="pepper">ADD TO CART</a>
+            </div>
+          </div>
+          <div class="card" id="spring">
+            <img class="card-img-top" src="images/spring.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Spring Onions</h5>
+              <p class="card-text">₦ 2,130</p>
+              <p class="del"><del>₦ 2,230</del></p>
+              <a href="#" class="btn" id="click">ADD TO CART</a>
+            </div>
+          </div>
+          <div class="card" id="egg">
+            <img class="card-img-top" src="images/egg.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">raw Egg</h5>
+              <p class="card-text">₦ 1,135</p>
+              <p class="del"><del>₦ 1,270</del></p>
+              <a href="#" class="btn" id="click">ADD TO CART</a>
+            </div>
+          </div>
+          <div class="card" id="beans">
+            <img class="card-img-top" src="images/green.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">green Beans</h5>
+              <p class="card-text">₦ 1,500</p>
+              <p class="del"><del>₦ 1,850</del></p>
+              <a href="#" class="btn" id="click">ADD TO CART</a>
+            </div>
+          </div>
+          <div class="card" id="onion">
+            <img class="card-img-top" src="images/onions.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Onions</h5>
+              <p class="card-text">₦ 280</p>
+              <p class="del"><del>₦ 350</del></p>
+              <a href="#" class="btn" id="click">ADD TO CART</a>
+            </div>
+          </div> 
+        </div>
+      </div>
+        <button onclick="topFunction()" id="myBtn" title="go to top">
+        <img width="24" height="24" src="https://img.icons8.com/ios-glyphs/30/collapse-arrow.png" alt="collapse-arrow"/>
+        </button>
+    </div>
+        <div class="fixed">
+          <p id="tune">2023 © All rights reserved by <i>Zenith Wal-mart</i></p>
+        <div class="social-icon">
+          <a href="/index.html" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="/index.html" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="/index.html" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="/index.html" target="_blank">
+            <i class="fab fa-pinterest"></i>
+          </a>
+        </div>
+        </div>
+         
+
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" 
+integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" 
+integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+crossorigin="anonymous"></script>
+</body>
+</html>
+
+

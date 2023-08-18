@@ -1,0 +1,952 @@
+html,body {
+    padding: 0;
+    margin: 0;
+}
+
+.container-fluid {
+    /* background: linear-gradient(90deg, rgba(72, 160, 107, 1) 18%, rgba(161, 255, 199, 1) 99%); */
+    height: 130vh;
+    width: 100%;
+    position: relative;
+    top: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card > * {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cardHoverClass {
+    box-shadow: 2px 2px 2px 2px #cbc9c9fe;
+}
+
+.navbar {
+    border-bottom: 2px solid orange;
+}
+
+#fast {
+    border: 5px solid orange;
+    position: absolute;
+    top: -5px;
+    left: -1px;
+    right: -2px;
+    height: 3.4rem;
+}
+
+.dark-mode {
+    background-color: #170303;
+    color: white;
+}
+
+.container-mode {
+    background-color: hsl(0, 2%, 10%);
+}
+
+.card-mode {
+    background-color: #000;
+    color: #fff;
+}
+
+
+.border-black {
+    background-color: #191919;
+}
+
+/* Styles for the switch container */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    top: 5vh;
+    visibility: hidden;
+}
+
+#toggleSwitch {
+    visibility: hidden;
+}
+
+/* Styles for the switch slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+/* Styles for the slider's appearance when the switch is on */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+/* Styles for the switch when it's checked (on) */
+#toggleSwitch:checked+.slider {
+    background-color: #2196F3;
+}
+
+#toggleSwitch:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+.modal{
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    width: 50%;
+    margin-left: 25%;
+    border: none;
+}
+
+.modal-button{
+    cursor: pointer;
+    background-color: orange;
+    font-weight: bold;
+    border: none;
+}
+
+.modal-button:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+#mode{
+    font-weight: 600;
+}
+
+#price{
+    left: 50%;
+    margin-top: -10vh;
+    display: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    position: absolute;
+}
+
+.container {
+    /* background-color: rgba(255, 255, 255, 0.762); */
+    position: relative;
+    min-height: 100vh;
+    min-width: 100%;
+    top: 8vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#totalCounter {
+    position: absolute;
+    margin-top: -5vh;
+    margin-left: 4%;
+    background-color: #ff0000;
+    color: #000;
+    padding: 4px 8px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.cart-counter {
+    position: absolute;
+    top: 0.7vh;
+    left: 10%;
+    background-color: green;
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+
+.button {
+    font-weight: 600;
+    width: 2rem;
+    cursor: pointer;
+}
+
+.button-green {
+    background-color: green;
+    color: #fff;
+    border: none;
+    margin-right: 5%;
+}
+
+.button-red {
+    background-color: red;
+    color: #fff;
+    border: none;
+    margin-right: 5%;
+}
+
+
+#sub-title{
+    font-size: 1rem;
+    color: #fff;
+    padding-top: 18px;
+    font-weight: 500;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-bottom: 13px;
+    margin-left: 10%;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    left: 20%;
+    top: 0vh;
+}
+
+
+#trolley {
+   margin-right: 4px;
+}
+
+#sub-title:hover{
+   color: orange;
+   text-decoration: none;
+}
+
+#cart{
+    position: absolute;
+    left: 0;
+}
+
+.card a{
+    color: darkblue;
+}
+
+
+.card a:hover {
+    color: darkblue;
+}
+
+.nav-item:hover {
+    background-color: orange;
+    border-radius: 5px;
+}
+
+.nav-item {
+    margin: 10%;
+    transition: 0.4s ease-in-out;
+    display: flex;
+}
+
+.close{
+    position: absolute;
+    top: 1vh;
+    left: 93%;
+    text-align: none;
+}
+
+#pop-up{
+    background: linear-gradient(90deg, rgba(72, 160, 107, 1) 18%, rgba(161, 255, 199, 1) 99%);
+    height: 10rem;
+    position: absolute;
+    top: 10vh;
+    left: 30%;
+    width: 40%;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .15);
+}
+
+#pop{
+    overflow: auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.25rem;
+    color: #313133;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#info{
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    color: #fff;
+}
+
+#txt {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#txt:hover {
+    color: black;
+}
+
+.navbar i {
+    padding-top: 10px;
+    padding-left: 5px;
+    color: white;
+}
+
+@keyframes fade-animation {
+    0% {
+        opacity: 1;
+        color: gold;
+        border-color: gold;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.btn-outline-success {
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.5s, color 0.5s;
+    animation: fade-animation 2s infinite;
+}
+
+.btn-outline-success::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #ff0;
+    opacity: 0;
+    transition: left 0.5s, opacity 0.5s;
+}
+
+.btn-outline-success:hover {
+    background-color: #ff0;
+    color: #333;
+}
+
+.btn-outline-success:hover::before {
+    left: 100%;
+    opacity: 1;
+}
+
+#img {
+    cursor: pointer;
+    animation: anim 2s infinite;
+}
+
+@keyframes anim {
+    0% {
+        opacity: 1;
+        color: pink;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#dropdownMenuButton {
+    margin-top: 2vh;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+#use {
+    margin-right: 7px;
+    display: inline;
+}
+
+.dropdown .dropdown-menu {
+    background-color: #6c757d;
+}
+
+.dropdown-item {
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.dropdown .dropdown-item:hover {
+    background-color: #6c757d;
+    color: white;
+}
+
+#dropdownMenuButton {
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.5s, color 1s;
+    height: 4em;
+    margin-top: 1vh;
+}
+
+#dropdownMenuButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: orange;
+    opacity: 0;
+    transition: left 0.5s, opacity 0.5s;
+}
+
+#dropdownMenuButton:hover {
+    background-color: orange;
+    color: #333;
+}
+
+#dropdownMenuButton:hover::before {
+    left: 100%;
+    opacity: 1;
+}
+
+#userGreeting {
+    position: absolute;
+    font-size: 20px;
+    left: 42%;
+    top: 2vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card {
+    text-align: left;
+    /* transition: box-shadow 0.5s ease; */
+    max-width: 30%;
+    position: absolute;
+    left: 1%;
+    top: 8vh;
+    box-shadow: 5px 10px 10px 5px rgba(0, 0, 0, .15);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+#about{
+    width: 30%;
+    /* background-color: #fff; */
+    left: 65%;
+    top: 9vh;
+    transition: box-shadow 0.5s ease;
+    box-shadow: 5px 4px 10px 1px rgba(0, 0, 0, .15);
+    cursor: default;
+    position: absolute;
+}
+
+#about:hover{
+    transform: none;
+}
+
+#about > * {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #f1eeee;
+    transition: background-color 0.3s, color 0.3s;
+    /* Add border bottom after each ID */
+}
+
+#address,
+#phone {
+    border-bottom: 1px solid #f1eeee;
+    /* Add border bottom after address and phone */
+    padding-bottom: 5px;
+    /* Optional: add padding for better spacing */
+}
+
+#font{
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    /* color: #313133; */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+#address{
+    font-size: 15px;
+    font-weight: 500;
+    /* color: #313133; */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#phone{
+    font-size: 15px;
+    font-weight: 500;
+    /* color: #313133; */
+    border-bottom: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#address,
+#phone,
+#number,
+#font,
+#note {
+    margin: 5px;
+    /* Optional: reset margins for consistency */
+}
+
+
+
+
+#cardGroup {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 15%;
+}
+
+.card-body #click{
+    position: absolute;
+    background-color: #F44336;
+    color: white;
+    text-align: center;
+    left: 0%;
+    letter-spacing: normal;
+    word-spacing: normal;
+    width: 100%;
+}
+
+#click:hover {
+    color: white;
+    background-color: rgb(255, 98, 0);
+}
+
+.card-group #click {
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.card-img-top {
+    height: 10rem;
+   
+}
+
+.card-body {
+    height: 10rem;
+}
+
+.card-title {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.4;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.card-text {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+
+.del {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #9a9898;
+}
+
+.card:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 7px 9px 5px #292828fe;
+    cursor: pointer;
+}
+@media (min-width: 701px) and (max-width:767px) {
+
+    #img {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        left: 3%;
+        top: 4vh;
+
+    }
+
+    .nav-item {
+        margin-left: -80%;
+        margin-top: 5vh;
+    }
+
+    #dropdownMenuButton {
+        left: 5%;
+        top: 2vh;
+    }
+}
+
+@media (max-width:700px) {
+
+    #img {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        left: 3%;
+        top: 4vh;
+    }
+
+    .nav-item {
+        margin-left: 80%;
+        margin-top: 5vh;
+    }
+
+    #dropdownMenuButton {
+        left: 5%;
+        top: 2vh;
+    }
+
+    #pop-up{
+        width: 70%;
+        left: 15%;
+    }
+
+    .dropdown .dropdown-menu{
+        top: 13vh;
+        left: -50%;
+    }
+}
+
+@media (max-width:540px) {
+
+    #img {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        left: 3%;
+        top: 4vh;
+
+    }
+
+    .nav-item {
+        margin-left: 20%;
+        margin-top: 5vh;
+        visibility: hidden;
+    }
+
+    #dropdownMenuButton {
+        left: -30%;
+        top: 0vh;
+    }
+
+    #pop-up {
+        width: 90%;
+        left: 5%;
+        top: 40vh;
+    }
+}
+
+@media (max-width: 270px) {
+    #img {
+        height: 60px;
+        width: 60px;
+    }
+}
+
+
+
+@media (max-width: 769px){
+    .nav-item {
+        margin-left: 20%;
+        margin-top: 5vh;
+        visibility: hidden;
+    }
+
+    #dropdownMenuButton {
+        left: -100%;
+        top: 0vh;
+    }
+
+    #img{
+        top: 1vh;
+    }
+
+}
+
+
+@media(max-width: 667px){
+    #about{
+        top: 80vh;
+        min-width: 90%;
+        left: 4%;
+    }
+    .container{
+        min-height: 120vh;
+    }
+    .card{
+        max-width: 70%;
+    }
+    #address{
+        font-size: 14px;
+    }
+    #number{
+        font-size: 14px;  
+    }
+    .container-fluid{
+        height: 150vh;
+    }
+}
+
+@media(max-width: 522px){
+    #dropdownMenuButton{
+        margin-left: 10%;
+    }
+    .nav-item{
+        margin-left: 10%;
+    }
+    .container-fluid {
+        height: 200vh;
+    }
+    .wrapper{
+        left: -10%;
+    }
+
+}
+
+@media(min-width: 304px) and (max-width: 400px) {
+    #dropdownMenuButton {
+        margin-left: 50%;
+    }
+
+    .nav-item {
+        margin-left: 10%;
+        margin-top: 23vh;
+    }
+
+    #about {
+        top: 80vh;
+        min-width: 90%;
+        left: 4%;
+    }
+
+    .container {
+        min-height: 150vh;
+    }
+
+    .card {
+        max-width: 97%;
+    }
+
+    #address {
+        font-size: 14px;
+    }
+
+    #number {
+        font-size: 14px;
+    }
+    #userGreeting{
+        left: 27%;
+    }
+    .container-fluid{
+        height: 180vh;
+    }
+    #pop-up {
+        width: 90%;
+        left: 5%;
+        height: 13rem;
+    }
+}
+
+@media (max-width: 304px){
+    #userGreeting{
+        left: 18%;
+    }
+    #about{
+        height: 15rem;
+    }
+    .container-fluid {
+        height: 180vh;
+    }
+    #dropdownMenuButton{
+        margin-left: 90%;
+        height: 3rem;
+    }
+    .wrapper{
+        left: -30%;
+        top: 0vh;
+    }
+    .card{
+        max-width: 96%;
+    }
+}
+
+@media (min-width: 820px) and (max-width: 820.9px){
+    #about{
+        height: 25rem;
+    }
+    .container{
+        min-height: 60vh;
+    }
+
+    #totalCounter{
+        margin-top: -3vh;
+    }
+}
+
+@media (min-width: 912px) and (max-width: 912.9px) {
+    #about {
+        height: 25rem;
+    }
+
+    .container {
+        min-height: 60vh;
+    }
+
+    #totalCounter{
+        margin-top: -2vh;
+    }
+}
+
+@media (min-width: 540px) and (max-width: 540.9px) {
+
+    .container-fluid{
+        min-height: 160vh;
+    }
+    .container {
+        min-height: 130vh;
+    }
+
+}
+
+@media (max-width: 1000px) and (orientation: landscape) {
+    .container-fluid{
+        min-height: 300vh;
+    }
+
+    .container{
+        height: 200vh;
+    }
+
+    #about{
+        top: 110vh;
+        height: 12rem;
+        min-width: 70%;
+        left: 10%;
+    }
+    #userGreeting{
+        top: 0vh;
+    }
+}
+
+@media(min-width: 375px) and (max-width: 375.9px){
+    #about{
+        height: 14rem;
+    }
+}
+
+@media(min-width: 280px) and (max-width: 280.9px) {
+    #pop-up{
+        height: 14rem;
+        width: 100%;
+        left: 0;
+    }
+    
+}
+
+@media(min-width: 414px) and (max-width: 414.9px) {
+    #totalCounter{
+        margin-top: -3vh;
+    }
+
+}
+
+@media(min-width: 390px) and (max-width: 390.9px) {
+    #totalCounter {
+        margin-top: -3vh;
+    }
+
+}
+
+@media(min-width: 393px) and (max-width: 393.9px) {
+    #totalCounter {
+        margin-top: -3vh;
+    }
+
+}
+
+@media(min-width: 360px) and (max-width: 360.9px) {
+    #totalCounter {
+        margin-top: -4vh;
+    }
+
+}
+
+@media(min-width: 412px) and (max-width: 412.9px) {
+    #totalCounter {
+        margin-top: -3vh;
+    }
+
+}
+
+@media(min-width: 768px) and (max-width: 768.9px) {
+    #totalCounter {
+        margin-top: -3vh;
+    }
+}
+
+@media(min-width: 1280px) and (max-width: 1280.9px) {
+    #totalCounter {
+        margin-top: -4vh;
+    }
+
+}
+
+
+@media(min-width: 668px) and (max-width: 1200px){
+    .card{
+        max-width: 50%;
+    }
+}
+
+
+@media(max-width: 700px){
+    .modal{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media(min-width: 1000px){
+    .container{
+        min-height: 30rem;
+    }
+}

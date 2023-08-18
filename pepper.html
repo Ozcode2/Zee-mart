@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="pepper.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <script src="https://kit.fontawesome.com/61bcea8d0d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+    crossorigin="anonymous">
+    <title>Zenith Wal-mart</title>
+</head>
+<body> 
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <p id="mode">No item in the cart</p>
+    <button class="modal-button" id="btn" onclick="closeModal()">OK</button>
+  </div>
+</div>  
+
+<nav class="navbar navbar-expand navbar-light flex-column flex-md-row sticky-top" style="background-color: rgb(23, 23, 90);">
+  <a class="navbar-brand" href="index.html">
+    <img src="images/plug3.png" id="img" alt="...">
+  </a>
+  <div class="navbar-nav-scroll">   
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+    <li class="wrapper"> 
+     <div id="totalCounter">0</div> 
+     <img width="24" height="24" id="trolley" src="https://img.icons8.com/material-outlined/24/ffffff/add-shopping-cart.png" alt="add-shopping-cart"/>
+     <a id="sub-title" onclick="checkOut()">Cart</a>
+      </li>
+      </a>
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <label class="switch" title="Change theme">
+    <input type="checkbox" id="toggleSwitch">
+    <span class="slider"></span>
+  </label>
+    <p id="userGreeting"></p>
+  <div class="container">
+    <div class="card-group" id="cardGroup">
+        <div class="card" id="pepper">
+         <img class="card-img-top" src="images/pepper.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">fresh Pepper</h5>
+              <p class="card-text">₦ 1,350</p>
+              <p class="del"><del>₦ 1,380</del></p>
+              <p id="price">0</p>
+            <a href="#" class="btn" id="clickPepper">
+            <img width="24" height="24" id="cartPepper" src="https://img.icons8.com/material-outlined/24/ffffff/add-shopping-cart.png" alt="add-shopping-cart"/>  
+                ADD TO CART
+            </a>
+            <div id="cartCounterPepper" class="cart-counter">0</div> 
+        </div>
+        </div>
+    </div>
+        <div class="card" id="about">
+            <h5 class="card-title" id="font">Delivery &amp; informations</h5>
+            <p class="card-text"  id="note">Free delivery on thousands of products in Lagos, Ibadan &amp; Abuja.
+                <a href="#" onclick="toggleContainer(); return false;">Details</a>
+            </p>
+            <p id="address"></p> 
+            <p id="phone">customer care: 08108464541</p>
+        </div>
+        <div id="pop-up" style="display: none;">
+         <h2 id="pop">Zenith Wal-mart Express
+            <img width="24" height="24" src="https://img.icons8.com/material-outlined/24/FFA500/telegram-app.png" alt="telegram-app"/>
+         </h2>   
+         <p id="info">Zenith Wal-mart Express offers you next day delivery in Lagos if you order before 2 pm.</p>
+         <button type="button" class="close" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+         </button>
+        </div>
+  </div>
+        <audio id="alert" controls style="display:none">
+          <source src="sounds/pop.mp3" type="audio/mpeg">
+        </audio>
+</div>
+
+
+
+
+
+
+<script src="pepper.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" 
+integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" 
+integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+.container-fluid {
+    /* background: linear-gradient(90deg, rgba(72, 160, 107, 1) 18%, rgba(161, 255, 199, 1) 99%); */
+    height: 150vh;
+    width: 100%;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cardHoverClass {
+    box-shadow: 2px 2px 2px 2px #cbc9c9fe;
+}
+
+.dark-mode {
+    background-color: #170303;
+    color: white;
+}
+
+.container-mode {
+    background-color: hsl(0, 2%, 10%);
+}
+
+.card-mode {
+    background-color: #000;
+    color: #fff;
+}
+
+
+.border-black {
+    background-color: #191919;
+}
+
+/* Styles for the switch container */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    top: 5vh;
+    visibility: hidden;
+}
+
+#toggleSwitch {
+    visibility: hidden;
+}
+
+/* Styles for the switch slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+/* Styles for the slider's appearance when the switch is on */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+/* Styles for the switch when it's checked (on) */
+#toggleSwitch:checked+.slider {
+    background-color: #2196F3;
+}
+
+#toggleSwitch:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+.modal {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    width: 50%;
+    margin-left: 25%;
+    border: none;
+    display: none;
+    color: #03fe03;
+}
+
+.modal-button {
+    cursor: pointer;
+    background-color: orange;
+    font-weight: bold;
+    border: none;
+}
+
+.modal-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+#mode {
+    font-weight: 600;
+}
+
+
+.card{
+    width: 40%;
+    height: 110vh;
+    text-align: center;
+    position: relative;
+    left: 24%;
+    top: 22vh;
+    box-shadow: 0px 7px 9px 5px #292828fe;
+    border-radius: 8px;
+    /* background: linear-gradient(90deg, rgba(72, 160, 107, 1) 18%, rgba(161, 255, 199, 1) 99%);
+    transition: 0.5s ease-in-out; */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card .card-title{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.card .sub-title{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+
+.card-footer{
+    margin-top: 10vh;
+    /* background: linear-gradient(90deg, rgba(72, 160, 107, 1) 18%, rgba(161, 255, 199, 1) 99%); */
+    background-color: #5AA861;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#font{
+    /* color: #6c757d; */
+    font-weight: 500;
+}
+
+#note{
+    font-weight: 500;
+}
+
+label{
+    /* color: #464646; */
+    transition: color 0.3s;
+    font-weight: 500;
+    float: left;
+    font-size: 14px;
+    letter-spacing: 0.02px;
+}
+
+.form-control.is-valid {
+    border-color: #b00200 !important;
+}
+
+#form{
+    margin-top: 7vh;
+    line-height: 3;   
+}
+
+.card .btn{
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.2s, color 0.2s;
+    margin-top: 10vh;
+    background-color: orange;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    height: 3rem;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: orange;
+    opacity: 0;
+    transition: left 0.5s, opacity 0.5s;
+}
+
+.btn:hover {
+    background-color: darkgreen;
+    color: white;
+}
+
+.btn:hover::before {
+    left: 100%;
+    opacity: 1;
+}
+
+.card-footer a:hover{
+    text-decoration: none;
+}
+
+
+
+#user_email::placeholder {
+    color: #bfb8b8;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+#user_password::placeholder {
+    color: #bfb8b8;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+#user_email {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#user_password {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.card-footer a{
+    margin-left: 2%;
+    color: brown;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+#demo{
+    color: brown;
+    font-size: 12px;
+}
+
+@media (min-width: 400px) and (max-width: 1000px){
+
+.container-fluid .card{
+    width: 80%;
+    position: relative;
+    left: 10%;
+    height: 55rem;
+}
+
+.container-fluid {
+    /* background: linear-gradient(90deg, rgba(72, 160, 107, 1) 18%, rgba(161, 255, 199, 1) 99%); */
+    height: 150vh;
+    width: 100%;
+    position: relative;
+}
+
+.rounded{
+    position: absolute;
+    top: 3vh;
+    left: 45%;
+    width: 10%;
+}
+}
+
+@media (max-width: 400px){
+
+    .container-fluid .card {
+        width: 90%;
+        position: relative;
+        left: 5%;
+        height: 55rem;
+    }
+
+    .container-fluid {
+        /* background: linear-gradient(90deg, rgba(72, 160, 107, 1) 18%, rgba(161, 255, 199, 1) 99%); */
+        height: 190vh;
+        width: 100%;
+        position: relative;
+    }
+
+    .rounded {
+        position: absolute;
+        top: 10vh;
+        left: 45%;
+        width: 15%;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 480px){
+    .login{
+        left: 30%;
+    }
+
+    #close {
+        left: 30%;
+    }
+}
+
+@media (max-width: 320px) {
+    .login {
+        left: 25%;
+        top: 17vh;
+    }
+
+    #close{
+        left: 25%;
+        top: 17vh;
+    }
+}
+
+@media (max-width: 1000px) and (orientation: landscape) {
+    .container-fluid {
+        height: 360vh;
+    }
+
+    .container-fluid .card {
+        top: 30vh;
+    }
+}
